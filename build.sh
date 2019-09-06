@@ -1,9 +1,11 @@
 #!/bin/bash
 . config.ini
+NODEDIR="./node"
+
 cat > ./genesis.json << EOF
 {
     "initial_timestamp": "2018-12-05T08:55:11.000",
-    "initial_key": "$EOS_PUB_DEV_KEY",
+    "initial_key": "$EOS_INITIAL_KEY",
     "initial_configuration": {
       "max_block_net_usage": 1048576,
       "target_block_net_usage_pct": 1000,
@@ -27,7 +29,6 @@ cat > ./genesis.json << EOF
 }
 EOF
 
-NODEDIR="./node"
 if [ ! -d $NODEDIR ]; then
   mkdir -p $NODEDIR;
 fi
@@ -41,7 +42,7 @@ if [ ! -d \$DATADIR ]; then
 mkdir -p \$DATADIR;
 fi
 nodeos \\$2
---signature-provider \$EOS_PUB_DEV_KEY=KEY:\$EOS_PRIV_DEV_KEY \\
+--signature-provider \$EOS_PUB_KEY=KEY:\$EOS_PRIV_KEY \\
 --plugin eosio::producer_plugin \\
 --plugin eosio::chain_api_plugin \\
 --plugin eosio::http_plugin \\
