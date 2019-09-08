@@ -141,5 +141,17 @@ Initialize system account:
 ```sh
 cleos push action eosio init '["0", "4,SYS"]' -p eosio@active
 ```
+### Create staked accounts
+We are going to create the following staked accounts:
+```
+accountnum01 has 8KB of RAM, 100000000 SYS on CPU and NET.
+accountnum02 has 8KB of RAM, 100000000 SYS on CPU and NET.
+accountnum03 has 8KB of RAM, 100000000 SYS on CPU and NET.
+```
+Create a staked account with initial resources and public key.
+```sh
+cleos system newaccount eosio --transfer accountnum11 EOS8WxyqA8VWUXPoG4hnZPRkReVs5oPwuzjc6MgYSs8KnDpkFB9sV --stake-net "100000000.0000 SYS" --stake-cpu "100000000.0000 SYS" --buy-ram-kbytes 8192
+```
+
 
 ## Troubleshooting

@@ -5,7 +5,7 @@ NODEDIR="./node"
 cat > ./genesis.json << EOF
 {
     "initial_timestamp": "2018-12-05T08:55:11.000",
-    "initial_key": "$EOS_INITIAL_KEY",
+    "initial_key": "$EOS_GENESIS_KEY",
     "initial_configuration": {
       "max_block_net_usage": 1048576,
       "target_block_net_usage_pct": 1000,
