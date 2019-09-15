@@ -1,22 +1,31 @@
 # EOS Node Setup
+This is a step-by-step guideline to build an EOS Full Node.
 
-## Prerequisites
+In case you want to build a Private EOS Blockchain for testing purposes, please refer to another guideline over here.
+
+## Table of Contents
+1. [Dependencies](#dependencies)
+2. [Wallet Setup](#wallet-setup)
+3. [Node Initiation](#node-initiation)
+4. [Basic Usage](#basic-usage)
+## Dependencies
 Install [EOSIO](https://github.com/EOSIO/eos) pre-compiled binaries.
 
-Install [EOSIO.CDT](https://github.com/EOSIO/eosio.cdt) binaries.
+Install [EOSIO.CDT](https://github.com/EOSIO/eosio.cdt) binaries (for building smart contracts).
 
-## Setup wallet
+## Wallet Setup 
 Create a new wallet (skip this step if you already have a locally stored wallet):
 ```sh
 cleos wallet create --to-console
 ```
 
-```
-Creating wallet: default
-Save password to use in the future to unlock this wallet.
-Without password imported keys will not be retrievable.
-"PW5KC8otxqtEsVUUYdy6nqPuW63v5z8Nwwg3Wtje3HP5CCNzZhjMP"
-```
+> Creating wallet: default
+
+> Save password to use in the future to unlock this wallet.
+
+> Without password imported keys will not be retrievable.
+> "PW5KC8otxqtEsVUUYdy6nqPuW63v5z8Nwwg3Wtje3HP5CCNzZhjMP"
+
 Open the wallet:
 ```sh
 cleos wallet open
@@ -42,7 +51,7 @@ Import Private Key to the wallet:
 cleos wallet import --private-key
 ```
 Enter the above generated Private Key.
-## Boot the node
+## Node Initiation
 Clone master branch:
 ```sh
 git clone https://github.com/tuan-tl/eos-node
