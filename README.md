@@ -8,6 +8,7 @@ In case you want to build a Private EOS Blockchain for testing purposes, please 
 2. [Wallet Setup](#wallet-setup)
 3. [Node Initiation](#node-initiation)
 4. [Basic Usage](#basic-usage)
+
 ## Dependencies
 Install [EOSIO](https://github.com/EOSIO/eos) pre-compiled binaries.
 
