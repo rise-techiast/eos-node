@@ -20,12 +20,10 @@ Create a new wallet (skip this step if you already have a locally stored wallet)
 cleos wallet create --to-console
 ```
 
-> Creating wallet: default
-
-> Save password to use in the future to unlock this wallet.
-
-> Without password imported keys will not be retrievable.
-> "PW5KC8otxqtEsVUUYdy6nqPuW63v5z8Nwwg3Wtje3HP5CCNzZhjMP"
+> Creating wallet: default<br/>
+Save password to use in the future to unlock this wallet.<br/>
+Without password imported keys will not be retrievable.<br/>
+"PW5KC8otxqtEsVUUYdy6nqPuW63v5z8Nwwg3Wtje3HP5CCNzZhjMP"
 
 Open the wallet:
 ```sh
@@ -42,10 +40,9 @@ Generate a pair of Public Key and Private Key:
 cleos create key --to-console
 ```
 
-```
-Private key: 5JhtdjUdCEAtvsM3oxwt88UTD6uviPJQcJYG5EjVtB4pSavX2du
+>Private key: 5JhtdjUdCEAtvsM3oxwt88UTD6uviPJQcJYG5EjVtB4pSavX2du<br/>
 Public key: EOS6nSXgwnwge4rHrwmixycjFPC8AayjcRXTv8R3SVEgtfw8woYQi
-```
+
 
 Import Private Key to the wallet:
 ```sh
