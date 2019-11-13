@@ -174,7 +174,7 @@ generate_file start.sh ""
 generate_file hard_replay.sh "" "" "$HARD_REPLAY_SCRIPT"
 generate_stop_file
 change_mod_files
-generate_config
+generate_config "$EOS_GENESIS_KEY" "" "" "" "$HTTP_SERVER_ADDRESS" "$P2P_LISTEN_ENDPOINT" "$P2P_PEER_ADDRESS"
 
 break;;
 
