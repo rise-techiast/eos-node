@@ -160,9 +160,9 @@ break;;
 
 read -p "Enter Genesis Key: " EOS_GENESIS_KEY
 read -p "Enter HTTP Request Endpoint (leave empty for default): " HTTP_SERVER_ADDRESS
-if [ -z ${HTTP_SERVER_ADDRESS+x} ]; then HTTP_SERVER_ADDRESS=$DEFAULT_HTTP_SERVER_ADDRESS; fi
+if [ -z $HTTP_SERVER_ADDRESS ]; then HTTP_SERVER_ADDRESS=$DEFAULT_HTTP_SERVER_ADDRESS; fi
 read -p "Enter P2P Listen Endpoint (leave empty for default): " P2P_LISTEN_ENDPOINT
-if [ -z ${P2P_LISTEN_ENDPOINT+x} ]; then P2P_LISTEN_ENDPOINT=$DEFAULT_P2P_LISTEN_ENDPOINT; fi
+if [ -z $P2P_LISTEN_ENDPOINT ]; then P2P_LISTEN_ENDPOINT=$DEFAULT_P2P_LISTEN_ENDPOINT; fi
 read -p "Enter P2P Peering Address (separate by \" \" for many options): " P2P_PEER_ADDRESS
 
 if [ ! -d $NODEDIR ]; then
