@@ -147,6 +147,7 @@ if [ ! -d $NODEDIR ]; then
   mkdir -p $NODEDIR;
 fi
 
+generate_genesis
 generate_file genesis_start.sh "$GENESIS_SCRIPT" "$BP_SCRIPT"
 generate_file start.sh "" "$BP_SCRIPT"
 generate_file hard_replay.sh "" "$BP_SCRIPT" "$HARD_REPLAY_SCRIPT"
@@ -169,6 +170,7 @@ if [ ! -d $NODEDIR ]; then
   mkdir -p $NODEDIR;
 fi
 
+generate_genesis
 generate_file genesis_start.sh "$GENESIS_SCRIPT"
 generate_file start.sh "" 
 generate_file hard_replay.sh "" "" "$HARD_REPLAY_SCRIPT"
