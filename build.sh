@@ -125,6 +125,8 @@ NODEDIR="./bp-node"
 GENESIS_SCRIPT=$'\n''--genesis-json $DATADIR"/../../genesis.json" \'
 BP_SCRIPT=$'\n''--signature-provider $EOS_PUB_KEY=KEY:$EOS_PRIV_KEY \'$'\n''--producer-name $PRODUCER_NAME \'$'\n''--plugin eosio::producer_plugin \'
 HARD_REPLAY_SCRIPT=$'\n''--hard-replay-blockchain \'
+DEFAULT_HTTP_SERVER_ADDRESS="0.0.0.0:8888"
+DEFAULT_P2P_LISTEN_ENDPOINT="0.0.0.0:9010"
 
 echo "Which node type do you want to setup?"
 select yn in "$BP_NODE_OPTION" "$API_FULLNODE_OPTION" "$CANEL_OPTION"; do
@@ -136,7 +138,9 @@ read -p "Enter Producer Name: " PRODUCER_NAME
 read -p "Enter Public Key: " EOS_PUB_KEY
 read -p "Enter Private Key: " EOS_PRIV_KEY
 read -p "Enter HTTP Request Endpoint (leave empty for default): " HTTP_SERVER_ADDRESS
+if [ -z $HTTP_SERVER_ADDRESS ]; then HTTP_SERVER_ADDRESS=$DEFAULT_HTTP_SERVER_ADDRESS; fi
 read -p "Enter P2P Listen Endpoint (leave empty for default): " P2P_LISTEN_ENDPOINT
+if [ -z $P2P_LISTEN_ENDPOINT ]; then P2P_LISTEN_ENDPOINT=$DEFAULT_P2P_LISTEN_ENDPOINT; fi
 read -p "Enter P2P Peering Address (separate by \" \" for many options): " P2P_PEER_ADDRESS
 
 if [ ! -d $NODEDIR ]; then
@@ -155,8 +159,10 @@ break;;
         $API_FULLNODE_OPTION ) 
 
 read -p "Enter Genesis Key: " EOS_GENESIS_KEY
-read -p "Enter HTTP Request Endpoint: (leave empty for default)" HTTP_SERVER_ADDRESS
-read -p "Enter P2P Listen Endpoint: (leave empty for default)" P2P_LISTEN_ENDPOINT
+read -p "Enter HTTP Request Endpoint (leave empty for default): " HTTP_SERVER_ADDRESS
+if [ -z ${HTTP_SERVER_ADDRESS+x} ]; then HTTP_SERVER_ADDRESS=$DEFAULT_HTTP_SERVER_ADDRESS; fi
+read -p "Enter P2P Listen Endpoint (leave empty for default): " P2P_LISTEN_ENDPOINT
+if [ -z ${P2P_LISTEN_ENDPOINT+x} ]; then P2P_LISTEN_ENDPOINT=$DEFAULT_P2P_LISTEN_ENDPOINT; fi
 read -p "Enter P2P Peering Address (separate by \" \" for many options): " P2P_PEER_ADDRESS
 
 if [ ! -d $NODEDIR ]; then
