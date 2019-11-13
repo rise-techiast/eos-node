@@ -99,3 +99,14 @@ tail -f ./blockchain/nodeos.log
 ```sh
 tail -f ./blockchain/nodeos.log
 ```
+
+## Troubleshooting
+#### Http service failed to start: Address already in use
+```
+error 2019-11-13T08:11:00.893 nodeos    http_plugin.cpp:545           plugin_startup       ] http service failed to start: Address already in use
+error 2019-11-13T08:11:00.895 nodeos    main.cpp:134                  main                 ] Address already in use
+```
+Resolution:
+```sh
+pkill nodeos
+```

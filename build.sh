@@ -59,8 +59,7 @@ nodeos \\$2$3
 --http-validate-host=false \\
 --verbose-http-errors \\
 --enable-stale-production \\$4
-\$P2P_PEER_ADDRESS_LIST
->> \$DATADIR"/nodeos.log" 2>&1 & \\
+\$P2P_PEER_ADDRESS_LIST >> \$DATADIR"/nodeos.log" 2>&1 & \\
 echo \$! > \$DATADIR"/eosd.pid"
 EOF
 }
