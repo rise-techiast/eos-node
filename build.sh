@@ -120,7 +120,6 @@ EOF
 BP_NODE_OPTION="Block Producer"
 API_FULLNODE_OPTION="API Full Node"
 CANEL_OPTION="Cancel"
-NODEDIR="./bp-node"
 GENESIS_SCRIPT=$'\n''--genesis-json $DATADIR"/../../genesis.json" \'
 BP_SCRIPT=$'\n''--signature-provider $EOS_PUB_KEY=KEY:$EOS_PRIV_KEY \'$'\n''--producer-name $PRODUCER_NAME \'$'\n''--plugin eosio::producer_plugin \'
 HARD_REPLAY_SCRIPT=$'\n''--hard-replay-blockchain \'

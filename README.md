@@ -55,15 +55,28 @@ Clone master branch:
 git clone https://github.com/tuan-tl/eos-node
 cd eos-node
 ```
-Change ```config.ini``` using the above generated keys (for `EOS_GENESIS_KEY` you need to get from genesis node)
-```ini
-EOS_GENESIS_KEY=$PUB_KEY_OF_GENESIS_NODE
-EOS_PUB_KEY=EOS6nSXgwnwge4rHrwmixycjFPC8AayjcRXTv8R3SVEgtfw8woYQi
-EOS_PRIV_KEY=5JhtdjUdCEAtvsM3oxwt88UTD6uviPJQcJYG5EjVtB4pSavX2du
-```
-Build the package:
+Build the directory:
 ```sh
 ./build.sh
+```
+Below is an example for Block Producer Node deployment:
+```
+1) Block Producer
+Genesis Key: EOS6nSXgwnwge4rHrwmixycjFPC8AayjcRXTv8R3SVEgtfw8woYQi
+Producer Name: eosio
+Public Key: EOS6nSXgwnwge4rHrwmixycjFPC8AayjcRXTv8R3SVEgtfw8woYQi
+Private Key: 5JhtdjUdCEAtvsM3oxwt88UTD6uviPJQcJYG5EjVtB4pSavX2du
+HTTP Request Endpoint: default
+P2P Listen Endpoint: default
+P2P Peering Address: 
+```
+Below is an example for API Full Node deployment:
+```
+2) API Full Node
+Genesis Key: EOS6nSXgwnwge4rHrwmixycjFPC8AayjcRXTv8R3SVEgtfw8woYQi
+HTTP Request Endpoint: default
+P2P Listen Endpoint: default
+P2P Peering Address: 
 ```
 Initiate the node:
 ```sh
