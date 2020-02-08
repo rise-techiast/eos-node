@@ -68,7 +68,7 @@ Public Key: EOS6nSXgwnwge4rHrwmixycjFPC8AayjcRXTv8R3SVEgtfw8woYQi
 Private Key: 5JhtdjUdCEAtvsM3oxwt88UTD6uviPJQcJYG5EjVtB4pSavX2du
 HTTP Request Endpoint: default
 P2P Listen Endpoint: default
-P2P Peering Address: 
+P2P Peering Address: localhost:9011 localhost:9012 localhost:9013
 ```
 Below is an example for API Full Node deployment:
 ```
@@ -76,7 +76,7 @@ Below is an example for API Full Node deployment:
 Genesis Key: EOS6nSXgwnwge4rHrwmixycjFPC8AayjcRXTv8R3SVEgtfw8woYQi
 HTTP Request Endpoint: default
 P2P Listen Endpoint: default
-P2P Peering Address: 
+P2P Peering Address: localhost:9011 localhost:9012 localhost:9013
 ```
 Initiate the node:
 ```sh
