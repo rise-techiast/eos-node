@@ -12,7 +12,7 @@ In case you want to build a Private EOS Blockchain for testing purposes, please 
 ## Dependencies
 Install [EOSIO](https://github.com/EOSIO/eos) pre-compiled binaries.
 
-Install [EOSIO.CDT](https://github.com/EOSIO/eosio.cdt) binaries (for building smart contracts).
+Install [EOSIO.CDT](https://github.com/EOSIO/eosio.cdt) binaries (for smart contracts compilation).
 
 ## Wallet Setup 
 Create a new wallet (skip this step if you already have a locally stored wallet):
