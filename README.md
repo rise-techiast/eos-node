@@ -10,9 +10,9 @@ In case you want to build a Private EOS Blockchain for testing purposes, please 
 4. [Basic Usage](#basic-usage)
 
 ## Dependencies
-Install [EOSIO](https://github.com/EOSIO/eos) pre-compiled binaries.
+Install [EOSIO](https://github.com/EOSIO/eos).
 
-Install [EOSIO.CDT](https://github.com/EOSIO/eosio.cdt) binaries (for smart contracts compilation).
+Install [EOSIO.CDT](https://github.com/EOSIO/eosio.cdt) (optional, required for smart contracts deployment).
 
 ## Wallet Setup 
 Create a new wallet (skip this step if you already have a locally stored wallet):
