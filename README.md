@@ -1,21 +1,16 @@
 # EOS Node Setup
-This is a step-by-step guideline to build an EOS Full Node.
+This is a step-by-step guideline to deploy an EOS Full Node.
 
 In case you want to build a Private EOS Blockchain for testing purposes, please refer to another guideline over here.
 
-## Table of Contents
-1. [Dependencies](#dependencies)
-2. [Wallet Setup](#wallet-setup)
-3. [Node Initiation](#node-initiation)
-4. [Basic Usage](#basic-usage)
-
 ## Dependencies
-Install [EOSIO](https://github.com/EOSIO/eos).
+* Install [EOSIO](https://github.com/EOSIO/eos).
+* Install [EOSIO.CDT](https://github.com/EOSIO/eosio.cdt) (optional, required for smart contracts deployment).
 
-Install [EOSIO.CDT](https://github.com/EOSIO/eosio.cdt) (optional, required for smart contracts deployment).
+## Wallet Setup
+Note: skip this section if you don't want to build a Block Producer.
 
-## Wallet Setup 
-Create a new wallet (skip this step if you already have a locally stored wallet):
+Create a new wallet:
 ```sh
 cleos wallet create --to-console
 ```
